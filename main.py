@@ -23,9 +23,9 @@ if st.button("第三题"):
 answer3 = st.text_input("输入数字")
 if answer3 == "81":
     st.write("对啦！")
-if answer1 == "第一行" and answer2 == "2519" and answer3 == "81":
-    st.subheader("赢啦！")
-    st.balloons()
-    st.write("口令红包是：嘿嘿俺赢得胜利啦")
-else:
-    st.subheader("还没全答对哦")
+# if answer1 == "第一行" and answer2 == "2519" and answer3 == "81":
+#     st.subheader("赢啦！")
+#     st.balloons()
+#     st.write("口令红包是：嘿嘿俺赢得胜利啦")
+# else:
+#     st.subheader("还没全答对哦")
