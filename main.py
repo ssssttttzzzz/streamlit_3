@@ -6,9 +6,9 @@ if st.button("第一题"):
 #     st.markdown("- 1 3 7 _")
 #     st.markdown("- 2 4 6 _")
 #     st.markdown("- 5 9 _")
-answer1 = st.selectbox(
-    '8填第几行？',
-    ('第一行', '第二行', '第三行'))
+# answer1 = st.selectbox(
+#     '8填第几行？',
+#     ('第一行', '第二行', '第三行'))
 # if answer1 == "第一行":
 #     st.write("对啦！")
 # if st.button("第二题"):
