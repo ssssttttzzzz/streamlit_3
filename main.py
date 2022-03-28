@@ -3,9 +3,9 @@ st.title("做对三题拿红包哦！")
 st.header("加油啊！")
 if st.button("第一题"):
     st.write("找规律")
-    st.markdown("- 1 3 7 _")
-    st.markdown("- 2 4 6 _")
-    st.markdown("- 5 9 _")
+#     st.markdown("- 1 3 7 _")
+#     st.markdown("- 2 4 6 _")
+#     st.markdown("- 5 9 _")
 answer1 = st.selectbox(
     '8填第几行？',
     ('第一行', '第二行', '第三行'))
