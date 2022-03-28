@@ -1,39 +1,31 @@
 import streamlit as st
-import random
-def compare(a,b):
-    sheet1 = {'剪刀': 0, '石头': 1, '布': 2}
-    if sheet1[a] - sheet1[b] == 0:
-        out_p = ["平局", 2]
-    elif sheet1[a] - sheet1[b] == 1 or sheet1[a] - sheet1[b] == -2:
-        out_p = ["你赢啦！！", 1]
-    else:
-        out_p = ["输掉了T.T", 0]
-    return out_p
-cop_of = ['剪刀', '石头', '布']
-st.title("连赢三局拿红包哦！")
-st.header("一共十次机会！")
-mark = 0
-for i in range(10):
-    pg = (i+1)/10
-    option = st.selectbox(
-        '选一个出拳吧！',
-        ('剪刀', '石头', '布'))
-    cop = random.randint(0, 2)
-    cop_o = cop_of[cop]
-    st.write('我出的是：', cop_o)
-    com = compare(option, cop_o)
-    st.write("第", i, "局:", com[0])
-    if com[1] == 1:
-        mark += 1
-    elif com[1] == 0:
-        mark = 0
-    if mark == 3:
-        break
-    elif i == 9:
-        st.write("机会用完啦")
-    else:
-        pass
-st.write("现在连赢", mark, "局")
-if mark == 3:
+st.title("做对三题拿红包哦！")
+st.header("加油啊！")
+if st.button("第一题"):
+    st.write("找规律")
+    st.markdown("- 1 3 7 _")
+    st.markdown("- 2 4 6 _")
+    st.markdown("- 5 9 _")
+answer1 = st.selectbox(
+    '8填第几行？',
+    ('第一行', '第二行', '第三行'))
+if answer1 == "第一行":
+    st.success("对啦！")
+if st.button("第二题"):
+    st.write("一个屋子有很多桌子和人，已知2人一桌多1人，3人一桌多2人，4人一桌\
+             多3人，5人一桌多4人，6人一桌多5人，7人一桌多6人，8人一桌多7人，9人一桌\
+             多8人，10人一桌多9人，11人一桌刚好，问一共几人？")
+answer2 = st.text_input("输入至少人数的数字")
+if answer2 == "2519":
+    st.success("对啦！")
+if st.button("第三题"):
+    st.write("F(1)=9, F(2)=25, F(3)=49, f(1)=3, f(2)=5 ,f(3)=7, F(4)= ?")
+answer3 = st.text_input("输入数字")
+if answer3 == "81":
+    st.success("对啦！")
+if answer1 == "第一行" and answer2 == "2519" and answer3 == "81":
+    st.subheader("赢啦！")
     st.balloons()
-    st.write("口令红包是：俺也能赢得胜利哦")
+    st.write("口令红包是：嘿嘿俺赢得胜利啦")
+else:
+    st.subheader("还没全答对哦")
