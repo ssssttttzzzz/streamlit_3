@@ -26,6 +26,6 @@ if answer3 == "81":
 if answer1 == "第一行" and answer2 == "2519" and answer3 == "81":
     st.subheader("赢啦！")
     st.balloons()
-    st.write("口令红包是：简简单单")
+    st.write("口令红包是：太过简单没什么压力哈")
 else:
     st.subheader("还没全答对哦")
